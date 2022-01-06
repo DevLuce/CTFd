@@ -23,7 +23,7 @@ class SetupForm(BaseForm):
     )
     ctf_description = TextAreaField(
         # "Event Description", description="Description for the CTF"
-        "이벤트 설명", description="본 CTF에 대해 설명해주세요.(옵션) "
+        "이벤트 설명", description="본 CTF에 대해 설명해주세요.(옵션)"
     )
     user_mode = RadioField(
         # "User Mode",
