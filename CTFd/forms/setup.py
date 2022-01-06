@@ -19,11 +19,13 @@ from CTFd.utils.config import get_themes
 class SetupForm(BaseForm):
     ctf_name = StringField(
         # "Event Name", description="The name of your CTF event/workshop"
-        "이벤트명", description="CTF 이벤트/워크샵의 이름을 지정합니다."
+        "이벤트명",
+        description="CTF 이벤트/워크샵의 이름을 지정합니다.",
     )
     ctf_description = TextAreaField(
         # "Event Description", description="Description for the CTF"
-        "이벤트 설명", description="본 CTF에 대해 설명해주세요.(옵션)"
+        "이벤트 설명",
+        description="본 CTF에 대해 설명해주세요.(옵션)",
     )
     user_mode = RadioField(
         # "User Mode",
@@ -89,11 +91,13 @@ class SetupForm(BaseForm):
 
     start = StringField(
         # "Start Time", description="Time when your CTF is scheduled to start. Optional."
-        "시작 시간", description="CTF의 시작 시간입니다. (옵션)"
+        "시작 시간",
+        description="CTF의 시작 시간입니다. (옵션)",
     )
     end = StringField(
         # "End Time", description="Time when your CTF is scheduled to end. Optional."
-        "종료 시간", description="CTF의 종료 시간입니다. (옵션)"
+        "종료 시간",
+        description="CTF의 종료 시간입니다. (옵션)",
     )
     # submit = SubmitField("Finish")
     submit = SubmitField("완료")
