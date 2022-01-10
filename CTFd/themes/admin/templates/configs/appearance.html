@@ -2,8 +2,10 @@
 	<form method="POST" autocomplete="off" class="w-100">
 		<div class="form-group">
 			<label for="ctf_name">
-				Competition Name
-				<small class="form-text text-muted">Competition name displayed instead of a logo</small>
+				<!-- Competition Name -->
+				이벤트명
+				<!-- <small class="form-text text-muted">Competition name displayed instead of a logo</small> -->
+				<small class="form-text text-muted">로고 대신 표시되는 이벤트명입니다.</small>
 			</label>
 			<input class="form-control" id='ctf_name' name='ctf_name' type='text' placeholder="CTF Name"
 				   {% if ctf_name is defined and ctf_name != None %}value="{{ ctf_name }}"{% endif %}>
@@ -11,14 +13,17 @@
 
 		<div class="form-group">
 			<label>
-				CTF Description<br>
+				<!-- CTF Description<br> -->
+				CTF 설명<br>
 				<small class="form-text text-muted">
-					Description for the CTF
+					<!-- Description for the CTF -->
+					본 CTF에 대한 설명을 적어주세요.
 				</small>
 			</label>
 			<textarea class="form-control" type="text" id="ctf_description" name="ctf_description" rows="5">{{ ctf_description }}</textarea>
 		</div>
 
-		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+		<!-- <button type="submit" class="btn btn-md btn-primary float-right">Update</button> -->
+		<button type="submit" class="btn btn-md btn-primary float-right">적용</button>
 	</form>
 </div>

@@ -86,7 +86,7 @@ class SetupForm(BaseForm):
         # "Theme Color",
         "테마 색상",
         # description="Color used by theme to control aesthetics. Requires theme support. Optional.",
-        description="테마별로 적용되는 색상입니다. 해당 테마의 지원이 요구됩니다.(옵션)",
+        description="테마별로 적용되는 색상입니다. 해당 테마의 지원이 필요합니다.(옵션)",
     )
 
     start = StringField(

@@ -7,7 +7,8 @@
 {% block content %}
 <div class="jumbotron">
 	<div class="container">
-		<h1>Configuration</h1>
+		<!-- <h1>Configuration</h1> -->
+		<h1>환경설정</h1>
 	</div>
 </div>
 <div class="container">
@@ -15,43 +16,55 @@
 		<div class="col-md-3">
 			<ul class="nav nav-pills flex-column">
 				<li class="nav-item">
-					<a class="nav-link rounded-0 active" href="#appearance" role="tab" data-toggle="tab">Appearance</a>
+					<!-- <a class="nav-link rounded-0 active" href="#appearance" role="tab" data-toggle="tab">Appearance</a> -->
+					<a class="nav-link rounded-0 active" href="#appearance" role="tab" data-toggle="tab">개요</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#theme" role="tab" data-toggle="tab">Theme</a>
+					<!-- <a class="nav-link rounded-0" href="#theme" role="tab" data-toggle="tab">Theme</a> -->
+					<a class="nav-link rounded-0" href="#theme" role="tab" data-toggle="tab">테마</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#accounts" role="tab" data-toggle="tab">Accounts</a>
+					<!-- <a class="nav-link rounded-0" href="#accounts" role="tab" data-toggle="tab">Accounts</a> -->
+					<a class="nav-link rounded-0" href="#accounts" role="tab" data-toggle="tab">계정 설정</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#fields" role="tab" data-toggle="tab">Custom Fields</a>
+					<!-- <a class="nav-link rounded-0" href="#fields" role="tab" data-toggle="tab">Custom Fields</a> -->
+					<a class="nav-link rounded-0" href="#fields" role="tab" data-toggle="tab">계정 추가 정보</a>
+				</li>
+				<li class="nav-item">
+					<!-- <a class="nav-link rounded-0" href="#settings" role="tab" data-toggle="tab">Settings</a> -->
+					<a class="nav-link rounded-0" href="#settings" role="tab" data-toggle="tab">이벤트 설정</a>
+				</li>
+				<li class="nav-item">
+					<!-- <a class="nav-link rounded-0" href="#security" role="tab" data-toggle="tab">Security</a> -->
+					<a class="nav-link rounded-0" href="#security" role="tab" data-toggle="tab">보안</a>
+				</li>
+				<li class="nav-item">
+					<!-- <a class="nav-link rounded-0" href="#email" role="tab" data-toggle="tab">Email</a> -->
+					<a class="nav-link rounded-0" href="#email" role="tab" data-toggle="tab">자동 메일</a>
+				</li>
+				<li class="nav-item">
+					<!-- <a class="nav-link rounded-0" href="#ctftime" role="tab" data-toggle="tab">Time</a> -->
+					<a class="nav-link rounded-0" href="#ctftime" role="tab" data-toggle="tab">시간 설정</a>
+				</li>
+				<li class="nav-item">
+					<!-- <a class="nav-link rounded-0" href="#legal" role="tab" data-toggle="tab">Legal</a> -->
+					<a class="nav-link rounded-0" href="#legal" role="tab" data-toggle="tab">정책</a>
+				</li>
+				<li class="nav-item">
+					<!-- <a class="nav-link rounded-0" href="#backup" role="tab" data-toggle="tab">Backup</a> -->
+					<a class="nav-link rounded-0" href="#backup" role="tab" data-toggle="tab">백업</a>
+				</li>
+				<li class="nav-item">
+					<!-- <a class="nav-link rounded-0" href="#usermode" role="tab" data-toggle="tab">User Mode</a> -->
+					<a class="nav-link rounded-0" href="#usermode" role="tab" data-toggle="tab">모드 설정</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link rounded-0" href="#mlc" role="tab" data-toggle="tab">MajorLeagueCyber</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#settings" role="tab" data-toggle="tab">Settings</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#security" role="tab" data-toggle="tab">Security</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#email" role="tab" data-toggle="tab">Email</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#ctftime" role="tab" data-toggle="tab">Time</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#legal" role="tab" data-toggle="tab">Legal</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#backup" role="tab" data-toggle="tab">Backup</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#usermode" role="tab" data-toggle="tab">User Mode</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link rounded-0" href="{{ url_for('admin.reset') }}" role="tab">Reset</a>
+					<!-- <a class="nav-link rounded-0" href="{{ url_for('admin.reset') }}" role="tab">Reset</a> -->
+					<a class="nav-link rounded-0" href="{{ url_for('admin.reset') }}" role="tab">초기화</a>
 				</li>
 			</ul>
 		</div>
@@ -75,8 +88,6 @@
 
 				{% include "admin/configs/fields.html" %}
 
-				{% include "admin/configs/mlc.html" %}
-
 				{% include "admin/configs/settings.html" %}
 
 				{% include "admin/configs/security.html" %}
@@ -90,6 +101,8 @@
 				{% include "admin/configs/backup.html" %}
 
 				{% include "admin/configs/usermode.html" %}
+
+				{% include "admin/configs/mlc.html" %}
 			</div>
 		</div>
 	</div>
