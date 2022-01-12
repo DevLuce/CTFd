@@ -30,52 +30,74 @@ class ResetInstanceForm(BaseForm):
 
 class AccountSettingsForm(BaseForm):
     domain_whitelist = StringField(
-        "Account Email Whitelist",
-        description="Comma-seperated email domains which users can register under (e.g. ctfd.io, gmail.com, yahoo.com)",
+        # "Account Email Whitelist",
+        "메일 주소 화이트리스트",
+        # description="Comma-seperated email domains which users can register under (e.g. ctfd.io, gmail.com, yahoo.com)",
+        description="회원가입이 가능한 이메일 도메인을 설정합니다. 콤마 구분하여 여러 도메인을 입력할 수 있습니다. (e.g. ctfd.io, gmail.com, yahoo.com)",
     )
     team_creation = SelectField(
-        "Team Creation",
-        description="Control whether users can create their own teams (Teams mode only)",
-        choices=[("true", "Enabled"), ("false", "Disabled")],
+        # "Team Creation",
+        "팀 생성",
+        # description="Control whether users can create their own teams (Teams mode only)",
+        description="팀을 유저가 직접 생성할 수 있는지 여부를 설정합니다. (Team Mode에서만 가능)",
+        # choices=[("true", "Enabled"), ("false", "Disabled")],
+        choices=[("true", "설정"), ("false", "해제")],
         default="true",
     )
     team_size = IntegerField(
+        "팀 사이즈",
         widget=NumberInput(min=0),
-        description="Amount of users per team (Teams mode only)",
+        # description="Amount of users per team (Teams mode only)",
+        description="팀당 팀원 수를 지정합니다. (Team Mode에서만 가능)",
     )
     num_teams = IntegerField(
-        "Total Number of Teams",
+        # "Total Number of Teams",
+        "팀 총 개수",
         widget=NumberInput(min=0),
-        description="Max number of teams (Teams mode only)",
+        # description="Max number of teams (Teams mode only)",
+        description="최대 팀의 개수를 지정합니다. (Team Mode에서만 가능)",
     )
     verify_emails = SelectField(
-        "Verify Emails",
-        description="Control whether users must confirm their email addresses before playing",
-        choices=[("true", "Enabled"), ("false", "Disabled")],
+        # "Verify Emails",
+        "이메일 확인",
+        # description="Control whether users must confirm their email addresses before playing",
+        description="유저가 참가 전에 이메일을 통한 확인을 해야만 하는지 여부를 설정합니다.",
+        # choices=[("true", "Enabled"), ("false", "Disabled")],
+        choices=[("true", "설정"), ("false", "해제")],
         default="false",
     )
     team_disbanding = SelectField(
-        "Team Disbanding",
-        description="Control whether team captains are allowed to disband their own teams",
+        # "Team Disbanding",
+        "팀 해체",
+        # description="Control whether team captains are allowed to disband their own teams",
+        description="팀 대표가 자신의 팀을 해체할 수 있는지 여부를 설정합니다.",
         choices=[
-            ("inactive_only", "Enabled for Inactive Teams"),
-            ("disabled", "Disabled"),
+            # ("inactive_only", "Enabled for Inactive Teams"),
+            ("inactive_only", "팀비활성 가능 설정"),
+            # ("disabled", "Disabled"),
+            ("disabled", "해제"),
         ],
         default="inactive_only",
     )
     name_changes = SelectField(
-        "Name Changes",
-        description="Control whether users and teams can change their names",
-        choices=[("true", "Enabled"), ("false", "Disabled")],
+        # "Name Changes",
+        "이름 변경",
+        # description="Control whether users and teams can change their names",
+        description="유저명 또는 팀명을 변경할 수 있는지 여부를 설정합니다.",
+        # choices=[("true", "Enabled"), ("false", "Disabled")],
+        choices=[("true", "설정"), ("false", "해제")],
         default="true",
     )
     incorrect_submissions_per_min = IntegerField(
-        "Incorrect Submissions per Minute",
+        # "Incorrect Submissions per Minute",
+        "분당 오답 제출 허용 범위",
         widget=NumberInput(min=1),
-        description="Amount of submissions allowed per minute for flag bruteforce protection (default: 10)",
+        # description="Amount of submissions allowed per minute for flag bruteforce protection (default: 10)",
+        description="브루트포스 제출을 방지하기 위한 분당 오답 제출 허용 범위를 지정합니다. (기본값 : 10)",
     )
 
-    submit = SubmitField("Update")
+    # submit = SubmitField("Update")
+    submit = SubmitField("적용")
 
 
 class ExportCSVForm(BaseForm):
@@ -98,13 +120,15 @@ class LegalSettingsForm(BaseForm):
         description="External URL to a Terms of Service document hosted elsewhere",
     )
     tos_text = TextAreaField(
-        "Terms of Service", description="Text shown on the Terms of Service page",
+        "Terms of Service",
+        description="Text shown on the Terms of Service page",
     )
     privacy_url = URLField(
         "Privacy Policy URL",
         description="External URL to a Privacy Policy document hosted elsewhere",
     )
     privacy_text = TextAreaField(
-        "Privacy Policy", description="Text shown on the Privacy Policy page",
+        "Privacy Policy",
+        description="Text shown on the Privacy Policy page",
     )
     submit = SubmitField("Update")
