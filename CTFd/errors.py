@@ -12,8 +12,7 @@ def render_error(error):
     try:
         return (
             render_template(
-                "errors/{}.html".format(error.code),
-                error=error.description,
+                "errors/{}.html".format(error.code), error=error.description,
             ),
             error.code,
         )

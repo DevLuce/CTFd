@@ -31,5 +31,7 @@ def sqlalchemy_to_pydantic(
         for name, python_type in include.items():
             default = None
             fields[name] = (python_type, default)
-    pydantic_model = create_model(db_model.__name__, **fields)  # type: ignore
+    pydantic_model = create_model(
+        db_model.__name__, **fields  # type: ignore
+    )
     return pydantic_model
