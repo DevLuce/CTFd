@@ -14,37 +14,49 @@
     <div class="row">
       <div class="col-md-3">
         <div class="form-group">
-          <label>Field Type</label>
+          <!-- <label>Field Type</label> -->
+          <label>필드 타입</label>
           <select
             class="form-control custom-select"
             v-model.lazy="field.field_type"
           >
-            <option value="text">Text Field</option>
-            <option value="boolean">Checkbox</option>
+            <!-- <option value="text">Text Field</option> -->
+            <option value="text">텍스트</option>
+            <!-- <option value="boolean">Checkbox</option> -->
+            <option value="boolean">체크박스</option>
           </select>
-          <small class="form-text text-muted"
+          <!-- <small class="form-text text-muted"
             >Type of field shown to the user</small
+          > -->
+          <small class="form-text text-muted"
+            >유저가 입력하는 필드 타입</small
           >
         </div>
       </div>
       <div class="col-md-9">
         <div class="form-group">
-          <label>Field Name</label>
+          <!-- <label>Field Name</label> -->
+          <label>필드 이름</label>
           <input type="text" class="form-control" v-model.lazy="field.name" />
-          <small class="form-text text-muted">Field name</small>
+          <!-- <small class="form-text text-muted">Field name</small> -->
+          <small class="form-text text-muted">필드 이름</small>
         </div>
       </div>
 
       <div class="col-md-12">
         <div class="form-group">
-          <label>Field Description</label>
+          <!-- <label>Field Description</label> -->
+          <label>필드 설명</label>
           <input
             type="text"
             class="form-control"
             v-model.lazy="field.description"
           />
-          <small id="emailHelp" class="form-text text-muted"
+          <!-- <small id="emailHelp" class="form-text text-muted"
             >Field Description</small
+          > -->
+          <small id="emailHelp" class="form-text text-muted"
+            >필드 설명</small
           >
         </div>
       </div>
@@ -57,7 +69,8 @@
               type="checkbox"
               v-model.lazy="field.editable"
             />
-            Editable by user in profile
+            <!-- Editable by user in profile -->
+            유저 프로필에서 수정 가능하도록 설정
           </label>
         </div>
         <div class="form-check">
@@ -67,7 +80,8 @@
               type="checkbox"
               v-model.lazy="field.required"
             />
-            Required on registration
+            <!-- Required on registration -->
+            회원가입시에 반드시 기입 요청 설정
           </label>
         </div>
         <div class="form-check">
@@ -77,7 +91,8 @@
               type="checkbox"
               v-model.lazy="field.public"
             />
-            Shown on public profile
+            <!-- Shown on public profile -->
+            공개 프로필에서 보여지도록 설정
           </label>
         </div>
       </div>
@@ -91,7 +106,8 @@
             type="button"
             @click="saveField()"
           >
-            Save
+            <!-- Save -->
+            저장
           </button>
         </div>
       </div>
@@ -139,7 +155,8 @@ export default {
               this.field = response.data;
               ezToast({
                 title: "Success",
-                body: "Field has been updated!",
+                // body: "Field has been updated!",
+                body: "필드가 업데이트 되었습니다!",
                 delay: 1000
               });
             }
@@ -162,7 +179,8 @@ export default {
               this.field = response.data;
               ezToast({
                 title: "Success",
-                body: "Field has been created!",
+                // body: "Field has been created!",
+                body: "필드가 생성되었습니다!",
                 delay: 1000
               });
             }
@@ -170,7 +188,8 @@ export default {
       }
     },
     deleteField: function() {
-      if (confirm("Are you sure you'd like to delete this field?")) {
+      // if (confirm("Are you sure you'd like to delete this field?")) {
+      if (confirm("이 필드를 정말 삭제하시겠습니까?")) {
         if (this.persistedField()) {
           CTFd.fetch(`/api/v1/configs/fields/${this.field.id}`, {
             method: "DELETE",
