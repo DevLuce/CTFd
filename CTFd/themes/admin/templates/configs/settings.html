@@ -2,86 +2,108 @@
 	<form method="POST" autocomplete="off" class="w-100">
 		<div class="form-group">
 			<label>
-				Challenge Visibility<br>
+				<!-- Challenge Visibility<br> -->
+				문제 열람 범위<br>
 				<small class="form-text text-muted">
-					Control whether users must be logged in to see challenges
+					<!-- Control whether users must be logged in to see challenges -->
+					문제를 열람할 수 있는 유저의 권한 범위를 설정합니다.
 				</small>
 			</label>
 			<select class="form-control custom-select" name="challenge_visibility">
 				<option value="public" {% if challenge_visibility == 'public' %}selected{% endif %}>
-					Public
+					<!-- Public -->
+					전체 공개
 				</option>
 				<option value="private" {% if challenge_visibility == 'private' %}selected{% endif %}>
-					Private
+					<!-- Private -->
+					멤버 이상
 				</option>
 				<option value="admins" {% if challenge_visibility == 'admins' %}selected{% endif %}>
-					Admins Only
+					<!-- Admins Only -->
+					관리자만
 				</option>
 			</select>
 		</div>
 
 		<div class="form-group">
 			<label>
-				Score Visibility<br>
+				<!-- Score Visibility<br> -->
+				점수 열람 범위<br>
 				<small class="form-text text-muted">
-					Control whether solves/score are shown to the public, to logged in users, hidden to all non-admins, or only shown to admins
+					<!-- Control whether solves/score are shown to the public, to logged in users, hidden to all non-admins, or only shown to admins -->
+					솔루션 및 해결 점수를 열람할 수 있는 유저의 권한 범위를 설정합니다. 
 				</small>
 			</label>
 			<select class="form-control custom-select" name="score_visibility">
 				<option value="public" {% if score_visibility == 'public' %}selected{% endif %}>
-					Public
+					<!-- Public -->
+					전체 공개
 				</option>
 				<option value="private" {% if score_visibility == 'private' %}selected{% endif %}>
-					Private
+					<!-- Private -->
+					멤버 이상
 				</option>
 				<option value="hidden" {% if score_visibility == 'hidden' %}selected{% endif %}>
-					Hidden
+					<!-- Hidden -->
+					숨김 처리
 				</option>
 				<option value="admins" {% if score_visibility == 'admins' %}selected{% endif %}>
-					Admins Only
+					<!-- Admins Only -->
+					관리자만
 				</option>
 			</select>
 			<small class="form-text text-muted">
-				This setting should generally be the same as Account Visibility to avoid conflicts.
+				<!-- This setting should generally be the same as Account Visibility to avoid conflicts. -->
+				이 설정은 충돌을 피하기 위해 보통 계정 열람 범위 설정과 동일해야 합니다.
 			</small>
 		</div>
 
 		<div class="form-group">
 			<label>
-				Account Visibility<br>
+				<!-- Account Visibility<br> -->
+				계정 열람 범위<br>
 				<small class="form-text text-muted">
-					Control whether accounts (users &amp; teams) are shown to everyone, only to authenticated users, or only to admins
+					<!-- Control whether accounts (users &amp; teams) are shown to everyone, only to authenticated users, or only to admins -->
+					계정 (users &amp; teams) 을 열람할 수 있는 유저의 권한 범위를 설정합니다.
 				</small>
 			</label>
 			<select class="form-control custom-select" name="account_visibility">
 				<option value="public" {% if account_visibility == 'public' %}selected{% endif %}>
-					Public
+					<!-- Public -->
+					전체 공개
 				</option>
 				<option value="private" {% if account_visibility == 'private' %}selected{% endif %}>
-					Private
+					<!-- Private -->
+					멤버 이상
 				</option>
 				<option value="admins" {% if account_visibility == 'admins' %}selected{% endif %}>
-					Admins Only
+					<!-- Admins Only -->
+					관리자만
 				</option>
 			</select>
 			<small class="form-text text-muted">
-				This setting should generally be the same as Score Visibility to avoid conflicts.
+				<!-- This setting should generally be the same as Score Visibility to avoid conflicts. -->
+				이 설정은 충돌을 피하기 위해 보통 점수 열람 범위 설정과 동일해야 합니다.
 			</small>
 		</div>
 
 		<div class="form-group">
 			<label>
-				Registration Visibility<br>
+				<!-- Registration Visibility<br> -->
+				가입 권한 범위 설정<br>
 				<small class="form-text text-muted">
-					Control whether registration is enabled for everyone or disabled
+					<!-- Control whether registration is enabled for everyone or disabled -->
+					가입을 할 수 있는 권한 범위를 설정합니다. 
 				</small>
 			</label>
 			<select class="form-control custom-select" name="registration_visibility">
 				<option value="public" {% if registration_visibility == 'public' %}selected{% endif %}>
-					Public
+					<!-- Public -->
+					누구나
 				</option>
 				<option value="private" {% if registration_visibility == 'private' %}selected{% endif %}>
-					Private
+					<!-- Private -->
+					비공개
 				</option>
 				<option value="mlc" {% if registration_visibility == 'mlc' %}selected{% endif %}>
 					MajorLeagueCyber Only
@@ -93,14 +115,17 @@
 			<div class="form-check">
 				<label>
 					<input id="paused" name="paused" type="checkbox" {% if paused %}checked{% endif %}>
-					Pause CTF<br>
+					<!-- Pause CTF<br> -->
+					CTF 일시정지<br>
 					<small>
-						Prevent users from submitting answers until unpaused. Challenges can still be viewed.
+						<!-- Prevent users from submitting answers until unpaused. Challenges can still be viewed. -->
+						일시정지를 해제할 때까지 답안 제출을 차단합니다. 문제 열람은 가능합니다.
 					</small>
 				</label>
 			</div>
 		</div>
 
-		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+		<!-- <button type="submit" class="btn btn-md btn-primary float-right">Update</button> -->
+		<button type="submit" class="btn btn-md btn-primary float-right">적용</button>
 	</form>
 </div>

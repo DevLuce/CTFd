@@ -95,7 +95,6 @@ class AccountSettingsForm(BaseForm):
         # description="Amount of submissions allowed per minute for flag bruteforce protection (default: 10)",
         description="브루트포스 제출을 방지하기 위한 분당 오답 제출 허용 범위를 지정합니다. (기본값 : 10)",
     )
-
     # submit = SubmitField("Update")
     submit = SubmitField("적용")
 
