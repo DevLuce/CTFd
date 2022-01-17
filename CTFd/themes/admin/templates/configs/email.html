@@ -1,20 +1,25 @@
 <div role="tabpanel" class="tab-pane config-section" id="email">
 	<form method="POST" autocomplete="off" class="w-100">
-		<h5>Email Content</h5>
+		<!-- <h5>Email Content</h5> -->
+		<h5>메일 커스텀 설정</h5>
 		<small class="form-text text-muted">
-			Customize CTFd emails with <a href="https://docs.ctfd.io/docs/settings/emails/#email-content" target="_blank">predefined variables</a> and custom content
+			<!-- Customize CTFd emails with <a href="https://docs.ctfd.io/docs/settings/emails/#email-content" target="_blank">predefined variables</a> and custom content -->
+			<a href="https://docs.ctfd.io/docs/settings/emails/#email-content" target="_blank">정의된 변수</a>와 커스텀 내용을 작성하여 이메일을 발송합니다. 
 		</small>
 		<ul class="nav nav-tabs mt-3" role="tablist">
 			<li class="nav-item active">
 				<a class="nav-link active" href="#confirmation-email-tab" role="tab" data-toggle="tab">
-					Confirmation
+					<!-- Confirmation -->
+					가입 확인
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#account-details-email-tab" role="tab" data-toggle="tab">Account Details</a>
+				<!-- <a class="nav-link" href="#account-details-email-tab" role="tab" data-toggle="tab">Account Details</a> -->
+				<a class="nav-link" href="#account-details-email-tab" role="tab" data-toggle="tab">계정 정보</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#password-reset-email-tab" role="tab" data-toggle="tab">Password Reset</a>
+				<!-- <a class="nav-link" href="#password-reset-email-tab" role="tab" data-toggle="tab">Password Reset</a> -->
+				<a class="nav-link" href="#password-reset-email-tab" role="tab" data-toggle="tab">비밀번호 초기화</a>
 			</li>
 		</ul>
 
@@ -22,19 +27,23 @@
 			<div role="tabpanel" class="tab-pane active" id="confirmation-email-tab">
 				<div class="form-group">
 					<label class="pt-3">
-						Account Registration<br>
+						<!-- Account Registration<br> -->
+						회원가입 확인<br>
 						<small class="form-text text-muted">
-							Email sent to users after they've registered their account entirely
+							<!-- Email sent to users after they've registered their account entirely -->
+							회원가입을 통해 계정이 성공적으로 등록되면 발송되어지는 메일입니다.
 						</small>
 					</label>
 					<div>
 						<label>
-							Subject
+							<!-- Subject -->
+							제목
 						</label>
 						<input class="form-control" id='successful_registration_email_subject' name='successful_registration_email_subject' type='text'
 							value="{{ successful_registration_email_subject or ''}}">
 						<label>
-							Body
+							<!-- Body -->
+							내용
 						</label>
 						<textarea class="form-control" type="text" id="successful_registration_email_body" name="successful_registration_email_body"
 							rows="5">{{ successful_registration_email_body or '' }}</textarea>
@@ -43,18 +52,22 @@
 
 				<div class="form-group">
 					<label class="pt-3">
-						Account Confirmation<br>
+						<!-- Account Confirmation<br> -->
+						계정 승인 확인<br>
 						<small class="form-text text-muted">
-							Email sent to users to confirm their account
+							<!-- Email sent to users to confirm their account -->
+							계정이 승인되면 발송되어지는 메일입니다.
 						</small>
 					</label>
 					<div>
 						<label>
-							Subject
+							<!-- Subject -->
+							제목
 						</label>
 						<input class="form-control" id='verification_email_subject' name='verification_email_subject' type='text' value="{{ verification_email_subject or ''}}">
 						<label>
-							Body
+							<!-- Body -->
+							내용
 						</label>
 						<textarea class="form-control" type="text" id="verification_email_body" name="verification_email_body"
 							rows="5">{{ verification_email_body or '' }}</textarea>
@@ -64,19 +77,23 @@
 			<div role="tabpanel" class="tab-pane" id="account-details-email-tab">
 				<div class="form-group">
 					<label class="pt-3">
-						New Account Details<br>
+						<!-- New Account Details<br> -->
+						새 계정 정보<br>
 						<small class="form-text text-muted">
-							Email sent to new users (created by an admin) with their initial account details
+							<!-- Email sent to new users (created by an admin) with their initial account details -->
+							관리자에 의해 만들어진 계정 초기 정보를 해당 유저에게 발송됩니다.
 						</small>
 					</label>
 					<div>
 						<label>
-							Subject
+							<!-- Subject -->
+							계정
 						</label>
 						<input class="form-control" id='user_creation_email_subject' name='user_creation_email_subject' type='text'
 							value="{{ user_creation_email_subject or ''}}">
 						<label>
-							Body
+							<!-- Body -->
+							내용
 						</label>
 						<textarea class="form-control" type="text" id="user_creation_email_body" name="user_creation_email_body"
 							rows="5">{{ user_creation_email_body or '' }}</textarea>
@@ -86,19 +103,21 @@
 			<div role="tabpanel" class="tab-pane" id="password-reset-email-tab">
 				<div class="form-group">
 					<label class="pt-3">
-						Password Reset Request<br>
+						<!-- Password Reset Request<br> -->
+						비밀번호 초기화 요청<br>
 						<small class="form-text text-muted">
-							Email sent whent a user requests a password reset
+							<!-- Email sent whent a user requests a password reset -->
+							유저가 비밀번호 초기화를 요청할 때 발송합니다.
 						</small>
 					</label>
 					<div>
 						<label>
-							Subject
+							제목
 						</label>
 						<input class="form-control" id='password_reset_subject' name='password_reset_subject' type='text'
 							value="{{ password_reset_subject or ''}}">
 						<label>
-							Body
+							내용
 						</label>
 						<textarea class="form-control" type="text" id="password_reset_body" name="password_reset_body"
 							rows="5">{{ password_reset_body or '' }}</textarea>
@@ -107,19 +126,23 @@
 
 				<div class="form-group">
 					<label class="pt-3">
-						Password Reset Confirmation<br>
+						<!-- Password Reset Confirmation<br> -->
+						비밀번호 초기화 확인<br>
 						<small class="form-text text-muted">
-							Email sent whent a user successfully resets their password
+							<!-- Email sent whent a user successfully resets their password -->
+							비밀번호 초기화가 성공적으로 완료되었을 시에 발송됩니다.
 						</small>
 					</label>
 					<div>
 						<label>
-							Subject
+							<!-- Subject -->
+							제목
 						</label>
 						<input class="form-control" id='password_change_alert_subject' name='password_change_alert_subject' type='text'
 							value="{{ password_change_alert_subject or ''}}">
 						<label>
-							Body
+							<!-- Body -->
+							내용
 						</label>
 						<textarea class="form-control" type="text" id="password_change_alert_body" name="password_change_alert_body"
 							rows="5">{{ password_change_alert_body or '' }}</textarea>
@@ -130,14 +153,18 @@
 
 		<hr class="my-5">
 
-		<h5>Email Server</h5>
+		<!-- <h5>Email Server</h5> -->
+		<h5>메일 서버</h5>
 		<small class="form-text text-muted">
-			Change the email server used by CTFd to send email
+			<!-- Change the email server used by CTFd to send email -->
+			이메일 발송 서버를 변경합니다.
 		</small>
 		<ul class="nav nav-tabs my-3" role="tablist">
 			<li class="nav-item active">
-				<a class="nav-link active" href="#mailserver" role="tab" data-toggle="tab">Mail
-					Server</a>
+				<!-- <a class="nav-link active" href="#mailserver" role="tab" data-toggle="tab">Mail
+					Server</a> -->
+				<a class="nav-link active" href="#mailserver" role="tab" data-toggle="tab">메일
+					서버</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#mailgun" role="tab" data-toggle="tab">Mailgun</a>
@@ -146,9 +173,11 @@
 
 		<div class="form-group">
 			<label>
-				Mail From Address<br>
+				<!-- Mail From Address<br> -->
+				메일 주소<br>
 				<small class="form-text text-muted">
-					Email address used to send email
+					<!-- Email address used to send email -->
+					메일을 발송하는데 사용되는 메일 주소입니다.
 				</small>
 			</label>
 			<input class="form-control" id='mailfrom_addr' name='mailfrom_addr' type='text' {% if mailfrom_addr is defined and mailfrom_addr != None %}value="{{ mailfrom_addr }}"{% endif %}>
@@ -159,9 +188,11 @@
 
 				<div class="form-group">
 					<label>
-						Mail Server Address<br>
+						<!-- Mail Server Address<br> -->
+						메일 서버 주소<br>
 						<small class="form-text text-muted">
-							Mail Server Address
+							<!-- Mail Server Address -->
+							발송되는 메일의 서버 주소입니다.
 						</small>
 					</label>
 					<input class="form-control" id='mail_server' name='mail_server' type='text'
@@ -170,9 +201,11 @@
 
 				<div class="form-group">
 					<label>
-						Mail Server Port<br>
+						<!-- Mail Server Port<br> -->
+						메일 서버 포트<br>
 						<small class="form-text text-muted">
-							Mail Server Port
+							<!-- Mail Server Port -->
+							발송되는 메일 서버의 포트입니다.
 						</small>
 					</label>
 					<input class="form-control" id='mail_port' name='mail_port' type='text'
@@ -182,15 +215,18 @@
 					<label>
 						<input id="mail_useauth" name="mail_useauth" type="checkbox"
 							   {% if mail_useauth %}checked{% endif %}>
-						Use Mail Server Username and Password
+						<!-- Use Mail Server Username and Password -->
+						유저 이름과 패스워드를 메일 서버로 사용합니다.
 					</label>
 				</div>
 				<div id="mail_username_password">
 					<div class="form-group">
 						<label>
-							Username<br>
+							<!-- Username<br> -->
+							이름<br>
 							<small class="form-text text-muted">
-								Mail Server Account Username
+								<!-- Mail Server Account Username -->
+								메일 서버 계정 ID
 							</small>
 						</label>
 						{% if mail_username is defined and mail_username != None %}
@@ -202,9 +238,11 @@
 					</div>
 					<div class="form-group">
 						<label for="mail_password">
-							Password<br>
+							<!-- Password<br> -->
+							비밀번호<br>
 							<small class="form-text text-muted">
-								Mail Server Account Password
+								<!-- Mail Server Account Password -->
+								메일 서버 계정 비밀번호
 							</small>
 						</label>
 						{% if mail_password is defined and mail_password != None %}
@@ -214,7 +252,8 @@
 						{% endif %}
 						<input class="form-control" id='mail_password' name='mail_password' autocomplete='off' type='password'>
 					</div>
-					<sup>Uncheck setting and update to remove username and password</sup>
+					<!-- <sup>Uncheck setting and update to remove username and password</sup> -->
+					<sup>ID와 비밀번호를 제거하려면 체크를 해제하고 적용을 클릭합니다.</sup>
 					<br>
 					<br>
 				</div>
@@ -257,6 +296,7 @@
 				</div>
 			</div>
 		</div>
-		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+		<!-- <button type="submit" class="btn btn-md btn-primary float-right">Update</button> -->
+		<button type="submit" class="btn btn-md btn-primary float-right">적용</button>
 	</form>
 </div>
