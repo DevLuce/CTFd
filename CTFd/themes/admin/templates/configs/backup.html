@@ -1,54 +1,68 @@
 <div role="tabpanel" class="tab-pane config-section" id="backup">
 	<ul class="nav nav-tabs mb-3" role="tablist">
 		<li class="nav-item">
+			<!-- <a class="nav-link active" href="#export-ctf" aria-controls="export-ctf" role="tab"
+			   data-toggle="tab">Export</a> -->
 			<a class="nav-link active" href="#export-ctf" aria-controls="export-ctf" role="tab"
-			   data-toggle="tab">Export</a>
+			   data-toggle="tab">내보내기</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#import-ctf" aria-controls="import-ctf" role="tab" data-toggle="tab">Import</a>
+			<!-- <a class="nav-link" href="#import-ctf" aria-controls="import-ctf" role="tab" data-toggle="tab">Import</a> -->
+			<a class="nav-link" href="#import-ctf" aria-controls="import-ctf" role="tab" data-toggle="tab">불러오기</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link " href="#save-csv" aria-controls="save-csv" role="tab" data-toggle="tab">Download CSV</a>
+			<!-- <a class="nav-link " href="#save-csv" aria-controls="save-csv" role="tab" data-toggle="tab">Download CSV</a> -->
+			<a class="nav-link " href="#save-csv" aria-controls="save-csv" role="tab" data-toggle="tab">CSV 다운로드</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link " href="#import-csv" aria-controls="import-csv" role="tab" data-toggle="tab">Import CSV</a>
+			<!-- <a class="nav-link " href="#import-csv" aria-controls="import-csv" role="tab" data-toggle="tab">Import CSV</a> -->
+			<a class="nav-link " href="#import-csv" aria-controls="import-csv" role="tab" data-toggle="tab">CSV 불러오기</a>
 		</li>
 	</ul>
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active" id="export-ctf">
 			<div class="form-group">
-				<p>Exports are an archive of your CTF in its current state. They can be re-imported into other CTFd
-					instances or used by scripts and third parties to calculate statistics.</p>
-				<p>To download an export click the button below.</p>
+				<!-- <p>Exports are an archive of your CTF in its current state. They can be re-imported into other CTFd
+					instances or used by scripts and third parties to calculate statistics.</p> -->
+				<p>내보내기는 현재 상태를 저장합니다. 다른 CTFd 인스턴스에서 불러오거나 통계를 계산하기 위해 스크립트와 써드파티로 사용될 수 있습니다.</p>
+				<!-- <p>To download an export click the button below.</p> -->
+				<p>아래 버튼을 클릭하여 추출 파일을 다운로드할 수 있습니다.</p>
 			</div>
 			<div class="form-group">
-				<a href="{{ url_for('admin.export_ctf') }}" id="export-button" class="btn btn-warning">Export</a>
+				<!-- <a href="{{ url_for('admin.export_ctf') }}" id="export-button" class="btn btn-warning">Export</a> -->
+				<a href="{{ url_for('admin.export_ctf') }}" id="export-button" class="btn btn-warning">내보내기</a>
 			</div>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="import-ctf">
 			<div class="form-group">
-				<p>You can import saved CTFd exports by uploading them below. This will completely wipe your existing
+				<!-- <p>You can import saved CTFd exports by uploading them below. This will completely wipe your existing
 					CTFd instance and all your data will be replaced by the imported data.
-					You should only import data that you trust!</p>
+					You should only import data that you trust!</p> -->
+				<p>로컬에 저장된 CTFd 추출파일을 업로드하여 불러올 수 있습니다. 기존 CTFd 인스턴스는 완전히 삭제되며 기존 모든 데이터가 불러온 데이터로 교체됩니다.
+				   신뢰할 수 있는 데이터만 불러오세요!</p>
 
 				<div class="alert alert-warning" role="alert">
 					<small class="text-muted text-right">
 						<i class="fas fa-exclamation pr-2"></i>
-						Importing a CTFd export will completely wipe your existing data
+						<!-- Importing a CTFd export will completely wipe your existing data -->
+						CTFd 추출 파일을 불러오면 기존 데이터가 완전히 삭제됩니다.
 					</small>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="container-files">Import File</label>
+				<!-- <label for="container-files">Import File</label> -->
+				<label for="container-files">파일 불러오기</label>
 				<input class="form-control-file" type="file" name="backup" id="import-file" accept=".zip">
 			</div>
-			<input id="import-button" type="submit" class="btn btn-warning" value="Import">
+			<!-- <input id="import-button" type="submit" class="btn btn-warning" value="Import"> -->
+			<input id="import-button" type="submit" class="btn btn-warning" value="불러오기">
 		</div>
 		<div role="tabpanel" class="tab-pane" id="save-csv">
 			<div class="alert alert-warning" role="alert">
 				<small class="text-muted text-right">
 					<i class="fas fa-exclamation pr-2"></i>
-					CSVs exported from CTFd are not guaranteed to import back in via the Import CSV functionality. See <a href="https://docs.ctfd.io/docs/imports/csv/" target="_blank">CSV Importing instructions</a> for details.
+					<!-- CSVs exported from CTFd are not guaranteed to import back in via the Import CSV functionality. See <a href="https://docs.ctfd.io/docs/imports/csv/" target="_blank">CSV Importing instructions</a> for details. -->
+					CTFd에서 내보낸 CSV는 CSV 불러오기 기능을 통해 다시 가져올 수 없습니다. <a href="https://docs.ctfd.io/docs/imports/csv/" target="_blank">CSV 불러오기 설명</a>을 통해 상세 내용을 확인하세요.
 				</small>
 			</div>
 			{% with form = Forms.config.ExportCSVForm() %}
@@ -57,7 +71,8 @@
 					{{ form.table.label }}
 					{{ form.table(class="form-control custom-select") }}
 				</div>
-				<input type="submit" class="btn btn-warning" value="Download CSV">
+				<!-- <input type="submit" class="btn btn-warning" value="Download CSV"> -->
+				<input type="submit" class="btn btn-warning" value="CSV 다운로드">
 			</form>
 			{% endwith %}
 		</div>
@@ -68,7 +83,8 @@
 					<div class="alert alert-info" role="alert">
 						<small class="text-muted text-right">
 							<a href="https://docs.ctfd.io/docs/imports/csv/" target="_blank">
-								<i class="far fa-question-circle pr-2"></i> Instructions and CSV templates
+								<!-- <i class="far fa-question-circle pr-2"></i> Instructions and CSV templates -->
+								<i class="far fa-question-circle pr-2"></i> CSV 템플릿과 설명
 							</a>
 						</small>
 					</div>
@@ -88,7 +104,8 @@
 					</small>
 				</div>
 				{{ form.nonce() }}
-				<input type="submit" class="btn btn-warning" value="Import CSV">
+				<!-- <input type="submit" class="btn btn-warning" value="Import CSV"> -->
+				<input type="submit" class="btn btn-warning" value="CSV 불러오기">
 			</form>
 			{% endwith %}
 		</div>

@@ -106,28 +106,40 @@ class ExportCSVForm(BaseForm):
 
 class ImportCSVForm(BaseForm):
     csv_type = SelectField(
-        "CSV Type",
+        # "CSV Type",
+        "CSV 유형",
         choices=[("users", "Users"), ("teams", "Teams"), ("challenges", "Challenges")],
-        description="Type of CSV data",
+        # description="Type of CSV data",
+        description="CSV 데이터의 유형",
     )
-    csv_file = FileField("CSV File", description="CSV file contents")
+    # csv_file = FileField("CSV File", description="CSV file contents")
+    csv_file = FileField("CSV 파일", description="CSV 파일 내용")
 
 
 class LegalSettingsForm(BaseForm):
     tos_url = URLField(
-        "Terms of Service URL",
-        description="External URL to a Terms of Service document hosted elsewhere",
+        # "Terms of Service URL",
+        "서비스 약관 URL",
+        # description="External URL to a Terms of Service document hosted elsewhere",
+        description="외부에서 호스트된 서비스 약관 URL을 링크할 수 있습니다.",
     )
     tos_text = TextAreaField(
-        "Terms of Service",
-        description="Text shown on the Terms of Service page",
+        # "Terms of Service",
+        "서비스 약관",
+        # description="Text shown on the Terms of Service page",
+        description="서비스 약관 페이지에 표시되는 텍스트입니다.",
     )
     privacy_url = URLField(
-        "Privacy Policy URL",
-        description="External URL to a Privacy Policy document hosted elsewhere",
+        # "Privacy Policy URL",
+        "개인정보 보호정책 URL",
+        # description="External URL to a Privacy Policy document hosted elsewhere",
+        description="외부에서 호스트된 개인정보 보호정책 URL을 링크할 수 있습니다.",
     )
     privacy_text = TextAreaField(
-        "Privacy Policy",
-        description="Text shown on the Privacy Policy page",
+        # "Privacy Policy",
+        "개인정보 보호정책",
+        # description="Text shown on the Privacy Policy page",
+        description="개인정보 보호정책 페이지에 표시되는 텍스트입니다.",
     )
-    submit = SubmitField("Update")
+    # submit = SubmitField("Update")
+    submit = SubmitField("적용")
