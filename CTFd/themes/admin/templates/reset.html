@@ -6,7 +6,8 @@
 {% block content %}
 	<div class="jumbotron">
 		<div class="container">
-			<h1>Reset</h1>
+			<!-- <h1>Reset</h1> -->
+			<h1>초기화</h1>
 		</div>
 	</div>
 	<div class="container">
@@ -16,21 +17,25 @@
 				<form method="POST" id="reset-ctf-form">
 					<div class="alert alert-danger" role="alert">
 						<p>
-							Resetting your CTFd instance allows you to bulk delete data to prepare it for other events,
-							other classes, or to otherwise get it to a clean state.
+							<!-- Resetting your CTFd instance allows you to bulk delete data to prepare it for other events,
+							other classes, or to otherwise get it to a clean state. -->
+							CTFd 인스터스를 초기화하면 데이터를 대량 삭제하여 다른 이벤트, 다른 클래스, 등 다른 인스턴스를 위한 깨끗한 상태로 전환할 수 있습니다.
 						</p>
 
 						<p>
-							Resetting your CTFd instance will delete the selected data <strong>PERMANENTLY</strong>.
+							<!-- Resetting your CTFd instance will delete the selected data <strong>PERMANENTLY</strong>. -->
+							CTFd 인스턴스를 초기화하면 선택한 데이터가 <strong>영구적으로</strong> 삭제됩니다.
 						</p>
 
 						<p>
-							Think carefully before resetting because no automated backups are made and all selected data will be lost.
+							<!-- Think carefully before resetting because no automated backups are made and all selected data will be lost. -->
+							자동으로 백업이 수행되지 않으며 모든 데이터가 손실되므로 초기화하기 전에 신중하게 생각하십시오.
 						</p>
 
 						<span>
 							<strong>
-								Create backups of all data you need by <a href="{{ url_for('admin.config', _anchor='backup') }}">creating a CTFd Export</a>
+								<!-- Create backups of all data you need by <a href="{{ url_for('admin.config', _anchor='backup') }}">creating a CTFd Export</a> -->
+								<a href="{{ url_for('admin.config', _anchor='backup') }}">CTFd 내보내기</a>를 통해 필요한 모든 데이터의 백업을 저장할 수 있습니다.
 							</strong>
 						</span>
 					</div>
@@ -43,8 +48,10 @@
 							{{ form.accounts.label(class="form-check-label") }}
 						</div>
 						<span class="text-muted">
-							Deletes all user and team accounts and their associated information<br>
-							<small>(Users, Teams, Submissions, Tracking)</small>
+							<!-- Deletes all user and team accounts and their associated information<br> -->
+							유저와 팀 계정 관련 모든 정보를 삭제합니다.<br>
+							<!-- <small>(Users, Teams, Submissions, Tracking)</small> -->
+							<small>(유저, 팀, 제출, 추적)</small>
 						</span>
 					</div>
 
@@ -54,8 +61,10 @@
 							{{ form.submissions.label(class="form-check-label") }}
 						</div>
 						<span class="text-muted">
-							Deletes all records that accounts gained points or took an action<br>
-							<small>(Submissions, Awards, Unlocks, Tracking)</small>
+							<!-- Deletes all records that accounts gained points or took an action<br> -->
+							계정이 획득한 포인트와 행동한 모든 기록을 삭제합니다.<br>
+							<!-- <small>(Submissions, Awards, Unlocks, Tracking)</small> -->
+							<small>(제출, 수상, 잠금 해제, 추적)</small>
 						</span>
 					</div>
 
@@ -65,8 +74,10 @@
 							{{ form.challenges.label(class="form-check-label") }}
 						</div>
 						<span class="text-muted">
-							Deletes all challenges and associated data<br>
-							<small>(Challenges, Flags, Hints, Tags, Challenge Files)</small>
+							<!-- Deletes all challenges and associated data<br> -->
+							문제와 관련 모든 정보를 삭제합니다.<br>
+							<!-- <small>(Challenges, Flags, Hints, Tags, Challenge Files)</small> -->
+							<small>(문제, 플래그, 힌트, 태그, 문제 파일)</small>
 						</span>
 					</div>
 
@@ -76,8 +87,10 @@
 							{{ form.pages.label(class="form-check-label") }}
 						</div>
 						<span class="text-muted">
-							Deletes all pages and their associated files<br>
-							<small>(Pages, Page Files)</small>
+							<!-- Deletes all pages and their associated files<br> -->
+							페이지와 관련 모든 정보를 삭제합니다.<br>
+							<!-- <small>(Pages, Page Files)</small> -->
+							<small>(페이지, 페이지 파일)</small>
 						</span>
 					</div>
 
@@ -87,8 +100,9 @@
 							{{ form.notifications.label(class="form-check-label") }}
 						</div>
 						<span class="text-muted">
-							Deletes all notifications<br>
-							<small>(Notifications)</small>
+							<!-- Deletes all notifications<br> -->
+							모든 알림을 삭제합니다.<br>
+							<small>(알림)</small>
 						</span>
 					</div>
 

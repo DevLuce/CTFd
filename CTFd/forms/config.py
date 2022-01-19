@@ -9,23 +9,34 @@ from CTFd.utils.csv import get_dumpable_tables
 
 class ResetInstanceForm(BaseForm):
     accounts = BooleanField(
-        "Accounts",
-        description="Deletes all user and team accounts and their associated information",
+        # "Accounts",
+        "계정",
+        # description="Deletes all user and team accounts and their associated information",
+        description="유저와 팀 계정 관련 모든 정보를 삭제합니다.",
     )
     submissions = BooleanField(
-        "Submissions",
-        description="Deletes all records that accounts gained points or took an action",
+        # "Submissions",
+        "제출",
+        # description="Deletes all records that accounts gained points or took an action",
+        description="계정이 획득한 포인트와 행동한 모든 기록을 삭제합니다.",
     )
     challenges = BooleanField(
-        "Challenges", description="Deletes all challenges and associated data"
+        # "Challenges", description="Deletes all challenges and associated data"
+        "문제",
+        description="문제와 관련 모든 정보를 삭제합니다.",
     )
     pages = BooleanField(
-        "Pages", description="Deletes all pages and their associated files"
+        # "Pages", description="Deletes all pages and their associated files"
+        "페이지",
+        description="페이지와 관련 모든 정보를 삭제합니다.",
     )
     notifications = BooleanField(
-        "Notifications", description="Deletes all notifications"
+        # "Notifications", description="Deletes all notifications"
+        "알림",
+        description="모든 알림을 삭제합니다.",
     )
-    submit = SubmitField("Reset CTF")
+    # submit = SubmitField("Reset CTF")
+    submit = SubmitField("CTF 초기화")
 
 
 class AccountSettingsForm(BaseForm):
