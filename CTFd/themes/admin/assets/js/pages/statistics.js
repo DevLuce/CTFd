@@ -32,7 +32,8 @@ const graph_configs = {
       const option = {
         title: {
           left: "center",
-          text: "Solve Counts"
+          // text: "Solve Counts"
+          text: "문제 해결 횟수"
         },
         tooltip: {
           trigger: "item"
@@ -48,12 +49,14 @@ const graph_configs = {
           }
         },
         xAxis: {
-          name: "Solve Count",
+          // name: "Solve Count",
+          name: "해결 횟수",
           nameLocation: "middle",
           type: "value"
         },
         yAxis: {
-          name: "Challenge Name",
+          // name: "Challenge Name",
+          name: "문제 이름",
           nameLocation: "middle",
           nameGap: 60,
           type: "category",
@@ -105,7 +108,8 @@ const graph_configs = {
       let option = {
         title: {
           left: "center",
-          text: "Submission Percentages"
+          // text: "Submission Percentages"
+          text: "제출 비율"
         },
         tooltip: {
           trigger: "item"
@@ -209,7 +213,8 @@ const graph_configs = {
       let option = {
         title: {
           left: "center",
-          text: "Category Breakdown"
+          // text: "Category Breakdown"
+          text: "카테고리 분류"
         },
         tooltip: {
           trigger: "item"
@@ -327,7 +332,8 @@ const graph_configs = {
       const option = {
         title: {
           left: "center",
-          text: "Solve Percentages per Challenge"
+          // text: "Solve Percentages per Challenge"
+          text: "문제별 정답율"
         },
         tooltip: {
           trigger: "item",
@@ -348,7 +354,8 @@ const graph_configs = {
           }
         },
         xAxis: {
-          name: "Challenge Name",
+          // name: "Challenge Name",
+          name: "문제 이름",
           nameGap: 40,
           nameLocation: "middle",
           type: "category",
@@ -359,7 +366,11 @@ const graph_configs = {
           }
         },
         yAxis: {
-          name: "Percentage of {0} (%)".format(
+          // name: "Percentage of {0} (%)".format(
+          //   CTFd.config.userMode.charAt(0).toUpperCase() +
+          //     CTFd.config.userMode.slice(1)
+          // ),
+          name: "{0} 정답율".format(
             CTFd.config.userMode.charAt(0).toUpperCase() +
               CTFd.config.userMode.slice(1)
           ),
@@ -454,7 +465,8 @@ const graph_configs = {
       const option = {
         title: {
           left: "center",
-          text: "Score Distribution"
+          // text: "Score Distribution"
+          text: "문제 분포"
         },
         tooltip: {
           trigger: "item"
@@ -470,14 +482,19 @@ const graph_configs = {
           }
         },
         xAxis: {
-          name: "Score Bracket",
+          // name: "Score Bracket",
+          name: "점수 범주",
           nameGap: 40,
           nameLocation: "middle",
           type: "category",
           data: brackets
         },
         yAxis: {
-          name: "Number of {0}".format(
+          // name: "Number of {0}".format(
+          //   CTFd.config.userMode.charAt(0).toUpperCase() +
+          //     CTFd.config.userMode.slice(1)
+          // ),
+          name: "{0} 개수".format(
             CTFd.config.userMode.charAt(0).toUpperCase() +
               CTFd.config.userMode.slice(1)
           ),
