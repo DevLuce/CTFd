@@ -114,18 +114,24 @@ class UserSearchForm(BaseForm):
     field = SelectField(
         "Search Field",
         choices=[
-            ("name", "Name"),
+            # ("name", "Name"),
+            ("name", "이름"),
             ("id", "ID"),
-            ("email", "Email"),
-            ("affiliation", "Affiliation"),
-            ("website", "Website"),
-            ("ip", "IP Address"),
+            # ("email", "Email"),
+            ("email", "이메일"),
+            # ("affiliation", "Affiliation"),
+            ("affiliation", "소속"),
+            # ("website", "Website"),
+            ("website", "웹사이트"),
+            # ("ip", "IP Address"),
+            ("ip", "IP 주소"),
         ],
         default="name",
         validators=[InputRequired()],
     )
     q = StringField("Parameter", validators=[InputRequired()])
-    submit = SubmitField("Search")
+    # submit = SubmitField("Search")
+    submit = SubmitField("검색")
 
 
 class PublicUserSearchForm(BaseForm):

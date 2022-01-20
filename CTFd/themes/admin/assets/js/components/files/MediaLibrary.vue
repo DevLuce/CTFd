@@ -6,7 +6,8 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h3 class="text-center">Media Library</h3>
+                <!-- <h3 class="text-center">Media Library</h3> -->
+                <h3 class="text-center">미디어 라이브러리</h3>
               </div>
             </div>
           </div>
@@ -47,7 +48,8 @@
                   </div>
                 </div>
                 <div class="col-md-6" id="media-library-details">
-                  <h4 class="text-center">Media Details</h4>
+                  <!-- <h4 class="text-center">Media Details</h4> -->
+                  <h4 class="text-center">미디어 상세 정보</h4>
                   <div id="media-item">
                     <div class="text-center" id="media-icon">
                       <div v-if="this.selectedFile">
@@ -88,7 +90,8 @@
 
                     <div class="form-group">
                       <div v-if="this.selectedFile">
-                        Link:
+                        <!-- Link: -->
+                        링크:
                         <input
                           class="form-control"
                           type="text"
@@ -98,7 +101,8 @@
                         />
                       </div>
                       <div v-else>
-                        Link:
+                        <!-- Link: -->
+                        링크:
                         <input
                           class="form-control"
                           type="text"
@@ -119,7 +123,8 @@
                             data-placement="top"
                             title="Insert link into editor"
                           >
-                            Insert
+                            <!-- Insert -->
+                            삽입
                           </button>
                         </div>
                         <div class="col-md-3">
@@ -157,7 +162,8 @@
           <form id="media-library-upload" enctype="multipart/form-data">
             <div class="form-group">
               <label for="media-files">
-                Upload Files
+                <!-- Upload Files -->
+                파일 업로드
               </label>
               <input
                 type="file"
@@ -167,7 +173,8 @@
                 multiple
               />
               <sub class="help-block">
-                Attach multiple files using Control+Click or Cmd+Click.
+                <!-- Attach multiple files using Control+Click or Cmd+Click. -->
+                Control+Click 또는 Cmd+Click 을 사용하여 여러 파일을 첨부할 수 있습니다.
               </sub>
             </div>
             <input type="hidden" value="page" name="type" />
@@ -180,7 +187,8 @@
               type="submit"
               class="btn btn-primary media-upload-button"
             >
-              Upload
+              <!-- Upload -->
+              업로드
             </button>
           </div>
         </div>

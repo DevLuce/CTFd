@@ -6,7 +6,8 @@
 {% block content %}
 <div class="jumbotron">
 	<div class="container">
-		<h1>Pages
+		<!-- <h1>Pages -->
+		<h1>페이지
 			<a class="no-decoration" href="{{ url_for('admin.pages_new') }}">
 				<span class="create-page" role="button" data-toggle="tooltip" title="Create Page">
 					<i class="btn-fa fas fa-plus-circle"></i>
@@ -38,11 +39,16 @@
 							<input type="checkbox" class="form-check-input" id="scoreboard-bulk-select" data-checkbox-all>&nbsp;
 						</div>
 					</th>
-					<th class="sort-col text-center"><b>Title</b></th>
-					<th class="sort-col text-center"><b>Route</b></th>
-					<th class="sort-col text-center"><b>Authentication</b></th>
-					<th class="sort-col text-center"><b>Hidden</b></th>
-					<th class="sort-col text-center"><b>Published</b></th>
+					<!-- <th class="sort-col text-center"><b>Title</b></th> -->
+					<th class="sort-col text-center"><b>제목</b></th>
+					<!-- <th class="sort-col text-center"><b>Route</b></th> -->
+					<th class="sort-col text-center"><b>경로</b></th>
+					<!-- <th class="sort-col text-center"><b>Authentication</b></th> -->
+					<th class="sort-col text-center"><b>인증</b></th>
+					<!-- <th class="sort-col text-center"><b>Hidden</b></th> -->
+					<th class="sort-col text-center"><b>숨김</b></th>
+					<!-- <th class="sort-col text-center"><b>Published</b></th> -->
+					<th class="sort-col text-center"><b>발행</b></th>
 				</tr>
 				</thead>
 				<tbody>
@@ -63,21 +69,24 @@
 						</td>
 						<td class="text-center">
 							{% if page.auth_required %}
-							Required
+							<!-- Required -->
+							필요
 							{% else %}
 							{% endif %}
 						</td>
 						<td class="text-center">
 							{% if page.hidden %}
-								Hidden
+								<!-- Hidden -->
+								숨겨짐
 							{% else %}
 							{% endif %}
 						</td>
 						<td class="text-center">
 							{% if page.draft %}
-								Draft
+								<!-- Draft -->
+								초안
 							{% else %}
-								Published
+								발행됨
 							{% endif %}
 						</td>
 					</tr>
