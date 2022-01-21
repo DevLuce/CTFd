@@ -6,7 +6,8 @@
 {% block content %}
 <div class="jumbotron">
 	<div class="container">
-		<h1>Teams</h1>
+		<!-- <h1>Teams</h1> -->
+		<h1>팀</h1>
 	</div>
 </div>
 <div class="container">
@@ -14,7 +15,8 @@
 		<div class="col-md-12">
 			{% if q and field %}
 			<h5 class="text-muted text-center">
-				Searching for teams with <strong>{{ field }}</strong> matching <strong>{{ q }}</strong>
+				<!-- Searching for teams with <strong>{{ field }}</strong> matching <strong>{{ q }}</strong> -->
+				<strong>{{ field }}</strong> 으로 <strong>'{{ q }}'</strong> 팀 검색 결과
 			</h5>
 			<h6 class="text-muted text-center pb-3">
 				Page {{ teams.page }} of {{ teams.total }} results
@@ -27,7 +29,8 @@
 					{{ form.field(class="form-control custom-select w-100") }}
 				</div>
 				<div class="form-group col-md-8">
-					{{ form.q(class="form-control w-100", placeholder="Search for matching teams") }}
+					<!-- {{ form.q(class="form-control w-100", placeholder="Search for matching teams") }} -->
+					{{ form.q(class="form-control w-100", placeholder="팀 검색") }}
 				</div>
 				<div class="form-group col-md-2">
 					<button type="submit" class="btn btn-primary w-100">
@@ -46,10 +49,12 @@
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<td><b>Team</b></td>
-						<td><b>Website</b></td>
-						<td class="d-none d-md-table-cell d-lg-table-cell"><b>Affiliation</b></td>
-						<td class="d-none d-md-table-cell d-lg-table-cell"><b>Country</b></td>
+						<!-- <th><b>Team</b></th> -->
+						<th><b>팀</b></th>
+						<!-- <th><b>Website</b></th> -->
+						<th><b>웹사이트</b></th>
+						<th class="d-none d-md-table-cell d-lg-table-cell"><b>소속</b></th>
+						<th class="d-none d-md-table-cell d-lg-table-cell"><b>국가</b></th>
 					</tr>
 				</thead>
 				<tbody>
