@@ -6,7 +6,8 @@
 {% block content %}
 <div class="jumbotron">
 	<div class="container">
-		<h1>Register</h1>
+		<!-- <h1>Register</h1> -->
+		<h1>회원가입</h1>
 	</div>
 </div>
 <div class="container">
@@ -29,21 +30,24 @@
 					<b>{{ form.name.label }}</b>
 					{{ form.name(class="form-control", value=name) }}
 					<small class="form-text text-muted">
-						Your username on the site
+						<!-- Your username on the site -->
+						사이트 내에서 사용될 이름
 					</small>
 				</div>
 				<div class="form-group">
 					<b>{{ form.email.label }}</b>
 					{{ form.email(class="form-control", value=email) }}
 					<small class="form-text text-muted">
-						Never shown to the public
+						<!-- Never shown to the public -->
+						공개 되지 않는 정보입니다.
 					</small>
 				</div>
 				<div class="form-group">
 					<b>{{ form.password.label }}</b>
 					{{ form.password(class="form-control", value=password) }}
 					<small class="form-text text-muted">
-						Password used to log into your account
+						<!-- Password used to log into your account -->
+						계정 로그인을 위한 비밀번호
 					</small>
 				</div>
 				{{ form.nonce() }}

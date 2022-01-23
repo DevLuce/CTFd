@@ -14,10 +14,14 @@ from CTFd.forms.users import (
 
 def RegistrationForm(*args, **kwargs):
     class _RegistrationForm(BaseForm):
-        name = StringField("User Name", validators=[InputRequired()])
-        email = EmailField("Email", validators=[InputRequired()])
-        password = PasswordField("Password", validators=[InputRequired()])
-        submit = SubmitField("Submit")
+        # name = StringField("User Name", validators=[InputRequired()])
+        name = StringField("유저 이름", validators=[InputRequired()])
+        # email = EmailField("Email", validators=[InputRequired()])
+        email = EmailField("이메일", validators=[InputRequired()])
+        # password = PasswordField("Password", validators=[InputRequired()])
+        password = PasswordField("비밀번호", validators=[InputRequired()])
+        # submit = SubmitField("Submit")
+        submit = SubmitField("제출")
 
         @property
         def extra(self):
@@ -32,9 +36,12 @@ def RegistrationForm(*args, **kwargs):
 
 
 class LoginForm(BaseForm):
-    name = StringField("User Name or Email", validators=[InputRequired()])
-    password = PasswordField("Password", validators=[InputRequired()])
-    submit = SubmitField("Submit")
+    # name = StringField("User Name or Email", validators=[InputRequired()])
+    name = StringField("유저 이름 또는 이메일", validators=[InputRequired()])
+    # password = PasswordField("Password", validators=[InputRequired()])
+    password = PasswordField("비밀번호", validators=[InputRequired()])
+    # submit = SubmitField("Submit")
+    submit = SubmitField("제출")
 
 
 class ConfirmForm(BaseForm):
