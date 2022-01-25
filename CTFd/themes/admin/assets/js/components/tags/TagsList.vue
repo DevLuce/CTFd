@@ -12,10 +12,13 @@
     </div>
 
     <div class="form-group">
+      <!-- <label
+        >Tag -->
       <label
-        >Tag
+        >태그
         <br />
-        <small class="text-muted">Type tag and press Enter</small>
+        <!-- <small class="text-muted">Type tag and press Enter</small> -->
+        <small class="text-muted">태그를 입력하고 Enter 키를 눌러주세요.</small>
       </label>
       <input
         id="tags-add-input"

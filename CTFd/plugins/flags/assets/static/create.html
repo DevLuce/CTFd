@@ -1,14 +1,17 @@
 <label>
 	Static<br>
-	<small>Enter static flag data</small>
+	<!-- <small>Enter static flag data</small> -->
+	<small>static 타입의 플래그 값을 입력해주세요.</small>
 </label>
 <div class="form-group">
 	<input type="text" class="form-control" name="content" value="{{ content }}">
 </div>
 <div class="form-group">
 	<select class="form-control custom-select col-md-6" name="data">
-		<option value="">Case Sensitive</option>
-		<option value="case_insensitive">Case Insensitive</option>
+		<!-- <option value="">Case Sensitive</option> -->
+		<option value="">대/소문자 구분</option>
+		<!-- <option value="case_insensitive">Case Insensitive</option> -->
+		<option value="case_insensitive">대/소문자 구분 없음</option>
 	</select>
 </div>
 <input type="hidden" name="type" value="static">

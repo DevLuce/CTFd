@@ -6,7 +6,8 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h3 class="text-center">Edit Flag</h3>
+                <!-- <h3 class="text-center">Edit Flag</h3> -->
+                <h3 class="text-center">플래그 수정</h3>
               </div>
             </div>
           </div>

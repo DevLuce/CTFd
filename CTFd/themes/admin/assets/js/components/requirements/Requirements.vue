@@ -38,15 +38,18 @@
 
       <div class="form-group">
         <label>
-          <b>Behavior if not unlocked</b>
+          <!-- <b>Behavior if not unlocked</b> -->
+          <b>잠금 해제 되지 않은 경우 공개 방식</b>
         </label>
         <select
           class="form-control custom-select"
           name="anonymize"
           v-model="selectedAnonymize"
         >
-          <option :value="false">Hidden</option>
-          <option :value="true">Anonymized</option>
+          <!-- <option :value="false">Hidden</option> -->
+          <option :value="false">비공개</option>
+          <!-- <option :value="true">Anonymized</option> -->
+          <option :value="true">익명으로 공개</option>
         </select>
       </div>
 
@@ -55,7 +58,8 @@
           class="btn btn-success float-right"
           :disabled="!newRequirements"
         >
-          Save
+          <!-- Save -->
+          저장
         </button>
       </div>
     </form>

@@ -6,7 +6,8 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h3>Hint</h3>
+                <!-- <h3>Hint</h3> -->
+                <h3>힌트</h3>
               </div>
             </div>
           </div>
@@ -26,8 +27,10 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label class="text-muted">
-                      Hint<br />
-                      <small>Markdown &amp; HTML are supported</small>
+                      <!-- Hint<br /> -->
+                      힌트<br />
+                      <!-- <small>Markdown &amp; HTML are supported</small> -->
+                      <small>마크다운 &amp; HTML 지원됩니다.</small>
                     </label>
                     <textarea
                       type="text"
@@ -40,8 +43,10 @@
 
                   <div class="form-group">
                     <label>
-                      Cost<br />
-                      <small>How many points it costs to see your hint.</small>
+                      <!-- Cost<br /> -->
+                      비용<br />
+                      <!-- <small>How many points it costs to see your hint.</small> -->
+                      <small>힌트를 열람하기 위한 포인트 비용을 설정합니다.</small>
                     </label>
                     <input
                       type="number"
@@ -59,7 +64,8 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-12">
-                  <button class="btn btn-primary float-right">Submit</button>
+                  <!-- <button class="btn btn-primary float-right">Submit</button> -->
+                  <button class="btn btn-primary float-right">적용</button>
                 </div>
               </div>
             </div>

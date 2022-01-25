@@ -2,39 +2,48 @@
 
 {% block header %}
 <div class="alert alert-secondary" role="alert">
-	Dynamic value challenges decrease in value as they receive solves. The more solves a dynamic challenge has,
-	the lower its value is to everyone who has solved it.
+	<!-- Dynamic value challenges decrease in value as they receive solves. The more solves a dynamic challenge has,
+	the lower its value is to everyone who has solved it. -->
+	Dynamic 타입은 문제가 해결 될 수록 점수 가치가 감소합니다. Dynamic 문제가 해결될 수록, 그 문제를 해결한 모든 유저들은 다 같이 감소된 점수를 부여받습니다.
 </div>
 {% endblock %}
 
 
 {% block value %}
 <div class="form-group">
-	<label for="value">Initial Value<br>
+	<!-- <label for="value">Initial Value<br> -->
+	<label for="value">시작 점수<br>
 		<small class="form-text text-muted">
-			This is how many points the challenge is worth initially.
+			<!-- This is how many points the challenge is worth initially. -->
+			초기에 문제의 점수가 몇 점의 가치를 가지는지 설정합니다.
 		</small>
 	</label>
-	<input type="number" class="form-control" name="initial" placeholder="Enter value" required>
+	<!-- <input type="number" class="form-control" name="initial" placeholder="Enter value" required> -->
+	<input type="number" class="form-control" name="initial" placeholder="점수를 입력하세요." required>
 
 </div>
 
 <div class="form-group">
-	<label for="value">Decay Limit<br>
+	<!-- <label for="value">Decay Limit<br> -->
+	<label for="value">감소 제한<br>
 		<small class="form-text text-muted">
-			The amount of solves before the challenge reaches its minimum value
+			<!-- The amount of solves before the challenge reaches its minimum value -->
+			문제가 최저 점수에 도달하는 데에 해결되는 수를 설정하여 제한합니다. 설정된 제한값을 초과하여 해결되면 동일한 최저값 점수를 받습니다.
 		</small>
 	</label>
-	<input type="number" class="form-control" name="decay" placeholder="Enter decay limit" required>
+	<!-- <input type="number" class="form-control" name="decay" placeholder="Enter decay limit" required> -->
+	<input type="number" class="form-control" name="decay" placeholder="제한값을 입력하세요." required>
 </div>
 
 <div class="form-group">
 	<label for="value">Minimum Value<br>
 		<small class="form-text text-muted">
-			This is the lowest that the challenge can be worth
+			<!-- This is the lowest that the challenge can be worth -->
+			문제를 해결할 떄에 받을 수 있는 가장 낮은 점수입니다.
 		</small>
 	</label>
-	<input type="number" class="form-control" name="minimum" placeholder="Enter minimum value" required>
+	<!-- <input type="number" class="form-control" name="minimum" placeholder="Enter minimum value" required> -->
+	<input type="number" class="form-control" name="minimum" placeholder="최저 점수를 입력하세요." required>
 </div>
 {% endblock %}
 

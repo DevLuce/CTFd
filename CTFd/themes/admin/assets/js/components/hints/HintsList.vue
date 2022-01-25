@@ -20,9 +20,12 @@
       <thead>
         <tr>
           <td class="text-center"><b>ID</b></td>
-          <td class="text-center"><b>Hint</b></td>
-          <td class="text-center"><b>Cost</b></td>
-          <td class="text-center"><b>Settings</b></td>
+          <!-- <td class="text-center"><b>Hint</b></td> -->
+          <td class="text-center"><b>힌트</b></td>
+          <!-- <td class="text-center"><b>Cost</b></td> -->
+          <td class="text-center"><b>비용</b></td>
+          <!-- <td class="text-center"><b>Settings</b></td> -->
+          <td class="text-center"><b>설정</b></td>
         </tr>
       </thead>
       <tbody>
@@ -49,7 +52,8 @@
     </table>
     <div class="col-md-12">
       <button class="btn btn-success float-right" @click="addHint">
-        Create Hint
+        <!-- Create Hint -->
+        힌트 생성
       </button>
     </div>
   </div>

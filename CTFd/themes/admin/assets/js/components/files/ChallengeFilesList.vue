@@ -3,8 +3,10 @@
     <table id="filesboard" class="table table-striped">
       <thead>
         <tr>
-          <td class="text-center"><b>File</b></td>
-          <td class="text-center"><b>Settings</b></td>
+          <!-- <td class="text-center"><b>File</b></td> -->
+          <td class="text-center"><b>파일</b></td>
+          <!-- <td class="text-center"><b>Settings</b></td> -->
+          <td class="text-center"><b>설정</b></td>
         </tr>
       </thead>
       <tbody>
@@ -38,16 +40,24 @@
             type="file"
           />
           <sub class="text-muted">
-            Attach multiple files using Control+Click or Cmd+Click.
+            <!-- Attach multiple files using Control+Click or Cmd+Click. -->
+            Control+Click 또는 Cmd+Click 을 사용하여 여러 파일을 첨부할 수 있습니다.
           </sub>
         </div>
         <div class="form-group">
-          <input
+          <!-- <input
             class="btn btn-success float-right"
             id="_submit"
             name="_submit"
             type="submit"
             value="Upload"
+          /> -->
+          <input
+            class="btn btn-success float-right"
+            id="_submit"
+            name="_submit"
+            type="submit"
+            value="업로드"
           />
         </div>
       </form>

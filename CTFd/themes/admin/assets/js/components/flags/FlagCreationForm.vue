@@ -23,7 +23,8 @@
         <div class="modal-body">
           <div class="create-keys-select-div">
             <label for="create-keys-select" class="control-label">
-              Choose Flag Type
+              <!-- Choose Flag Type -->
+              플래그 타입을 선택하세요.
             </label>
             <select
               class="form-control custom-select"
@@ -46,7 +47,8 @@
               type="submit"
               v-if="createForm"
             >
-              Create Flag
+              <!-- Create Flag -->
+              플래그 생성
             </button>
           </form>
         </div>

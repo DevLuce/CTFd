@@ -9,9 +9,11 @@
 
     <div class="form-group">
       <label>
-        Topic
+        <!-- Topic -->
+        주제
         <br />
-        <small class="text-muted">Type topic and press Enter</small>
+        <!-- <small class="text-muted">Type topic and press Enter</small> -->
+        <small class="text-muted">주제를 입력하고 Enter 키를 눌러주세요.</small>
       </label>
       <input
         id="tags-add-input"

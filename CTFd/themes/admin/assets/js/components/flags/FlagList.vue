@@ -19,9 +19,12 @@
     <table id="flagsboard" class="table table-striped">
       <thead>
         <tr>
-          <td class="text-center"><b>Type</b></td>
-          <td class="text-center"><b>Flag</b></td>
-          <td class="text-center"><b>Settings</b></td>
+          <!-- <td class="text-center"><b>Type</b></td> -->
+          <td class="text-center"><b>타입</b></td>
+          <!-- <td class="text-center"><b>Flag</b></td> -->
+          <td class="text-center"><b>플래그</b></td>
+          <!-- <td class="text-center"><b>Settings</b></td> -->
+          <td class="text-center"><b>설정</b></td>
         </tr>
       </thead>
       <tbody>
@@ -55,7 +58,8 @@
         class="btn btn-success d-inline-block float-right"
         @click="addFlag()"
       >
-        Create Flag
+        <!-- Create Flag -->
+        플래그 생성
       </button>
     </div>
   </div>

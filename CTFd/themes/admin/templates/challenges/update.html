@@ -5,8 +5,10 @@
 	{% block name %}
 	<div class="form-group">
 		<label>
-			Name<br>
-			<small class="form-text text-muted">Challenge Name</small>
+			<!-- Name<br> -->
+			이름<br>
+			<!-- <small class="form-text text-muted">Challenge Name</small> -->
+			<small class="form-text text-muted">문제의 제목</small>
 		</label>
 		<input type="text" class="form-control chal-name" name="name" value="{{ challenge.name }}">
 	</div>
@@ -15,8 +17,10 @@
 	{% block category %}
 	<div class="form-group">
 		<label>
-			Category<br>
-			<small class="form-text text-muted">Challenge Category</small>
+			<!-- Category<br> -->
+			카테고리<br>
+			<!-- <small class="form-text text-muted">Challenge Category</small> -->
+			<small class="form-text text-muted">문제를 분류할 카테고리</small>
 		</label>
 		<input type="text" class="form-control chal-category" name="category" value="{{ challenge.category }}">
 	</div>
@@ -25,9 +29,10 @@
 	{% block message %}
 	<div class="form-group">
 		<label>
-			Message<br>
+			<!-- Message<br> -->
+			메시지<br>
 			<small class="form-text text-muted">
-				Use this to give a brief introduction to your challenge.
+				문제에 대해 간단한 소개를 작성해주세요.
 			</small>
 		</label>
 		<textarea id="desc-editor" class="form-control chal-desc-editor markdown" name="description" rows="10">{{ challenge.description }}</textarea>
@@ -37,9 +42,11 @@
 	{% block connection_info %}
 	<div class="form-group">
 		<label>
-			Connection Info<br>
+			<!-- Connection Info<br> -->
+			연결 정보<br>
 			<small class="form-text text-muted">
-				Use this to specify a link, hostname, or connection instructions for your challenge.
+				<!-- Use this to specify a link, hostname, or connection instructions for your challenge. -->
+				문제에 대한 링크, 호스트네임, 혹은 연결 방법을 명시합니다.
 			</small>
 		</label>
 		<input type="text" class="form-control chal-connection-info" name="connection_info" value="{{ challenge.connection_info | default('', true) }}">
@@ -49,9 +56,11 @@
 	{% block value %}
 	<div class="form-group">
 		<label for="value">
-			Value<br>
+			<!-- Value<br> -->
+			점수<br>
 			<small class="form-text text-muted">
-				This is how many points teams will receive once they solve this challenge.
+				<!-- This is how many points teams will receive once they solve this challenge. -->
+				이 문제를 해결했을 때에 부여되는 포인트입니다.
 			</small>
 		</label>
 		<input type="number" class="form-control chal-value" name="value" value="{{ challenge.value }}" required>
@@ -61,8 +70,10 @@
 	{% block max_attempts %}
 	<div class="form-group">
 		<label>
-			Max Attempts<br>
-			<small class="form-text text-muted">Maximum amount of attempts users receive. Leave at 0 for unlimited.</small>
+			<!-- Max Attempts<br> -->
+			최대 시도 횟수<br>
+			<!-- <small class="form-text text-muted">Maximum amount of attempts users receive. Leave at 0 for unlimited.</small> -->
+			<small class="form-text text-muted">유저가 정답을 제출할 수 있는 최대 횟수입니다. 0은 제한이 없다는 의미입니다.</small>
 		</label>
 
 		<input type="number" class="form-control chal-attempts" name="max_attempts" value="{{ challenge.max_attempts }}">
@@ -72,13 +83,17 @@
 	{% block state %}
 	<div class="form-group">
 		<label>
-			State<br>
-			<small class="form-text text-muted">Changes the state of the challenge (e.g. visible, hidden)</small>
+			<!-- State<br> -->
+			상태<br>
+			<!-- <small class="form-text text-muted">Changes the state of the challenge (e.g. visible, hidden)</small> -->
+			<small class="form-text text-muted">챌린지의 상태(예: 공개, 비공개)를 변경합니다.</small>
 		</label>
 
 		<select class="form-control custom-select" name="state">
-			<option value="visible" {% if challenge.state == "visible" %}selected{% endif %}>Visible</option>
-			<option value="hidden" {% if challenge.state == "hidden" %}selected{% endif %}>Hidden</option>
+			<!-- <option value="visible" {% if challenge.state == "visible" %}selected{% endif %}>Visible</option> -->
+			<option value="visible" {% if challenge.state == "visible" %}selected{% endif %}>공개</option>
+			<!-- <option value="hidden" {% if challenge.state == "hidden" %}selected{% endif %}>Hidden</option> -->
+			<option value="hidden" {% if challenge.state == "hidden" %}selected{% endif %}>비공개</option>
 		</select>
 	</div>
 	{% endblock %}
@@ -86,7 +101,8 @@
 	{% block submit %}
 	<div>
 		<button class="btn btn-success btn-outlined float-right" type="submit">
-			Update
+			<!-- Update -->
+			적용
 		</button>
 	</div>
 	{% endblock %}

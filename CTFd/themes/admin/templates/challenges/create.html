@@ -5,24 +5,29 @@
 	{% block name %}
 	<div class="form-group">
 		<label>
-			Name:<br>
+			<!-- Name:<br> -->
+			이름:<br>
 			<small class="form-text text-muted">
-				The name of your challenge
+				<!-- The name of your challenge -->
+				문제의 제목
 			</small>
 		</label>
-		<input type="text" class="form-control" name="name" placeholder="Enter challenge name">
+		<!-- <input type="text" class="form-control" name="name" placeholder="Enter challenge name"> -->
+		<input type="text" class="form-control" name="name" placeholder="문제 이름을 입력하세요.">
 	</div>
 	{% endblock %}
 
 	{% block category %}
 	<div class="form-group">
 		<label>
-			Category:<br>
+			<!-- Category:<br> -->
+			카테고리:<br>
 			<small class="form-text text-muted">
-				The category of your challenge
+				문제를 분류할 카테고리
 			</small>
 		</label>
-		<input type="text" class="form-control" name="category" placeholder="Enter challenge category">
+		<!-- <input type="text" class="form-control" name="category" placeholder="Enter challenge category"> -->
+		<input type="text" class="form-control" name="category" placeholder="문제 카테고리를 입력하세요.">
 	</div>
 	{% endblock %}
 
@@ -30,9 +35,11 @@
 	{% block message %}
 	<div class="form-group">
 		<label>
-			Message:<br>
+			<!-- Message:<br> -->
+			메시지:<br>
 			<small class="form-text text-muted">
-				Use this to give a brief introduction to your challenge.
+				<!-- Use this to give a brief introduction to your challenge. -->
+				문제에 대해 간단한 소개를 작성해주세요.
 			</small>
 		</label>
 		<textarea id="new-desc-editor" class="form-control markdown" name="description" rows="10"></textarea>
@@ -42,12 +49,15 @@
 	{% block value %}
 	<div class="form-group">
 		<label>
-			Value:<br>
+			<!-- Value:<br> -->
+			점수:<br>
 			<small class="form-text text-muted">
-				This is how many points are rewarded for solving this challenge.
+				<!-- This is how many points are rewarded for solving this challenge. -->
+				이 문제를 해결했을 때에 부여되는 포인트입니다.
 			</small>
 		</label>
-		<input type="number" class="form-control" name="value" placeholder="Enter value" required>
+		<!-- <input type="number" class="form-control" name="value" placeholder="Enter value" required> -->
+		<input type="number" class="form-control" name="value" placeholder="점수를 입력하세요." required>
 	</div>
 	{% endblock %}
 
@@ -61,7 +71,8 @@
 
 	{% block submit %}
 	<div class="form-group">
-		<button class="btn btn-primary float-right create-challenge-submit" type="submit">Create</button>
+		<!-- <button class="btn btn-primary float-right create-challenge-submit" type="submit">Create</button> -->
+		<button class="btn btn-primary float-right create-challenge-submit" type="submit">생성</button>
 	</div>
 	{% endblock %}
 </form>

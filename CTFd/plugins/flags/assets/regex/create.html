@@ -1,23 +1,29 @@
 <label>
 	Regex Flag<br>
-	<small>Enter regex flag data</small>
+	<!-- <small>Enter regex flag data</small> -->
+	<small>regex 타입의 플래그 값을 입력해주세요.</small>
 </label>
 <div class="form-group">
 	<input type="text" class="form-control" name="content" value="{{ content }}">
 </div>
 <div class="form-group">
 	<select class="form-control custom-select col-md-6" name="data">
-		<option value="">Case Sensitive</option>
-		<option value="case_insensitive">Case Insensitive</option>
+		<!-- <option value="">Case Sensitive</option> -->
+		<option value="">대/소문자 구분</option>
+		<!-- <option value="case_insensitive">Case Insensitive</option> -->
+		<option value="case_insensitive">대/소문자 구분 없음</option>
 	</select>
 </div>
 <div class="form-group">
-	<label>Examples</label>
+	<!-- <label>Examples</label> -->
+	<label>예시</label>
 	<table class="table small">
 		<thead>
 			<tr>
-				<th scope="col">Description</th>
-				<th scope="col">Flag</th>
+				<!-- <th scope="col">Description</th> -->
+				<th scope="col">설명</th>
+				<!-- <th scope="col">Flag</th> -->
+				<th scope="col">플래그</th>
 			</tr>
 		</thead>
 		<tr>
