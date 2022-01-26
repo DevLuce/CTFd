@@ -9,7 +9,8 @@ const graph_configs = {
       let option = {
         title: {
           left: "center",
-          text: "Score over Time"
+          // text: "Score over Time"
+          text: "시간 경과에 따른 점수 추이"
         },
         tooltip: {
           trigger: "axis",
@@ -112,7 +113,8 @@ const graph_configs = {
       let option = {
         title: {
           left: "center",
-          text: "Category Breakdown"
+          // text: "Category Breakdown"
+          text: "카테고리 분류"
         },
         tooltip: {
           trigger: "item"
@@ -219,7 +221,8 @@ const graph_configs = {
       let option = {
         title: {
           left: "center",
-          text: "Solve Percentages"
+          // text: "Solve Percentages"
+          text: "정답율"
         },
         tooltip: {
           trigger: "item"

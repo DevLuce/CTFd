@@ -186,7 +186,8 @@ function renderSubmissionResponse(response) {
             .split(" ")[0]
         ) +
           1 +
-          " Solves"
+          // " Solves"
+          "개의 해결"
       );
     }
 
@@ -239,7 +240,8 @@ function markSolves() {
 function getSolves(id) {
   return CTFd.api.get_challenge_solves({ challengeId: id }).then(response => {
     const data = response.data;
-    $(".challenge-solves").text(parseInt(data.length) + " Solves");
+    // $(".challenge-solves").text(parseInt(data.length) + " Solves");
+    $(".challenge-solves").text(parseInt(data.length) + "개의 해결");
     const box = $("#challenge-solves-names");
     box.empty();
     for (let i = 0; i < data.length; i++) {

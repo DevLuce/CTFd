@@ -177,7 +177,7 @@ def setup():
         <br>
         <h4 class="text-center">
             <!-- <a href="admin">Click here</a> to login and setup your CTF -->
-            로그인하고 이벤트를 진행하려면 <a href="admin">클릭</a>해 주세요.
+            이벤트를 진행하려면 <a href="admin">클릭</a>해 주세요.
         </h4>
     </div>
 </div>"""

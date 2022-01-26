@@ -78,7 +78,8 @@ function renderSubmissionResponse(response, cb) {
           .split(" ")[0]
       ) +
         1 +
-        " Solves"
+        // " Solves"
+        "개의 해결"
     );
 
     answer_input.val("");
