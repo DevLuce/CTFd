@@ -7,36 +7,67 @@
 
 ## What is CTFd?
 
-CTFd is a Capture The Flag framework focusing on ease of use and customizability. It comes with everything you need to run a CTF and it's easy to customize with plugins and themes.
+<!-- CTFd is a Capture The Flag framework focusing on ease of use and customizability. It comes with everything you need to run a CTF and it's easy to customize with plugins and themes. -->
+
+CTFd 는 쉽게 사용할 수 있으며 커스터마이징이 가능한 해킹 방어 대회(Capture The Flag) 프레임워크입니다. CTF 를 주최하는데 필요한 모든 것이 제공되며 플러그인과 테마를 사용하여 쉽게 커스터마이징을 할 수 있습니다.  
 
 ![CTFd is a CTF in a can.](https://github.com/CTFd/CTFd/blob/master/CTFd/themes/core/static/img/scoreboard.png?raw=true)
 
+## What is CTFd-Korean?
+
+CTFd-Korean 은 Apache License 2.0에 의거하여 [CTFd](https://github.com/CTFd/CTFd) 오픈소스를 한국어 버전으로 수정하여 재배포한 것입니다. CTFd-Korean 을 통해 한국어 사용자 환경에서 CTFd 플랫폼을 이용할 수 있습니다.     
+본 소스코드 또한 Apache License 2.0 을 따르며 누구나 수정 및 재배포를 할 수 있습니다. 
+
 ## Features
 
-- Create your own challenges, categories, hints, and flags from the Admin Interface
-  - Dynamic Scoring Challenges
-  - Unlockable challenge support
-  - Challenge plugin architecture to create your own custom challenges
-  - Static & Regex based flags
-    - Custom flag plugins
-  - Unlockable hints
-  - File uploads to the server or an Amazon S3-compatible backend
-  - Limit challenge attempts & hide challenges
-  - Automatic bruteforce protection
-- Individual and Team based competitions
-  - Have users play on their own or form teams to play together
-- Scoreboard with automatic tie resolution
-  - Hide Scores from the public
-  - Freeze Scores at a specific time
-- Scoregraphs comparing the top 10 teams and team progress graphs
-- Markdown content management system
-- SMTP + Mailgun email support
-  - Email confirmation support
-  - Forgot password support
-- Automatic competition starting and ending
-- Team management, hiding, and banning
-- Customize everything using the [plugin](https://docs.ctfd.io/docs/plugins/overview) and [theme](https://docs.ctfd.io/docs/themes/overview) interfaces
-- Importing and Exporting of CTF data for archival
+<!-- - Create your own challenges, categories, hints, and flags from the Admin Interface -->
+- 관리자 인터페이스 내에서 문제, 카테고리, 힌트, 플래그를 생성할 수 있습니다.
+  <!-- - Dynamic Scoring Challenges -->
+  - 해결 횟수가 많아질 수록 획득 점수가 하락하는 문제 생성 가능
+  <!-- - Unlockable challenge support -->
+  - 문제 잠금 해제 기능 지원
+  <!-- - Challenge plugin architecture to create your own custom challenges -->
+  - 커스텀 문제를 출제할 수 있는 플러그인 아키텍쳐 지원
+  <!-- - Static & Regex based flags -->
+  - Static & Regex 기반 플래그
+    <!-- - Custom flag plugins -->
+    - 커스텀 플래그 플러그인
+  <!-- - Unlockable hints -->
+  - 잠금 해제 가능한 힌트 기능
+  <!-- - File uploads to the server or an Amazon S3-compatible backend -->
+  - 서버 혹은 AWS S3 호환 백엔드 파일 업로드
+  <!-- - Limit challenge attempts & hide challenges -->
+  - 문제 시도 제한 & 문제 숨김 기능
+  <!-- - Automatic bruteforce protection -->
+  - 브루트포스 제출 방지 기능
+<!-- - Individual and Team based competitions -->
+- 개인 및 팀 기반 경시
+  <!-- - Have users play on their own or form teams to play together -->
+  - 유저는 개인 혹은 팀으로 참여할 수 있음
+<!-- - Scoreboard with automatic tie resolution -->
+- 스코어보드에 자동 연동
+  <!-- - Hide Scores from the public -->
+  - 점수 비공개 기능
+  <!-- - Freeze Scores at a specific time -->
+  - 특정 시간대에 점수를 고정할 수 있는 프리징 기능
+<!-- - Scoregraphs comparing the top 10 teams and team progress graphs -->
+- 상위 10개 팀과 팀 진행 사항을 비교할 수 있는 그래프 제공
+<!-- - Markdown content management system -->
+- Markdown 컨텐츠 관리 시스템
+<!-- - SMTP + Mailgun email support -->
+- SMTP + Mailgun 이메일 지원
+  <!-- - Email confirmation support -->
+  - 이메일 확인 기능 지원
+  <!-- - Forgot password support -->
+  - 비밀번호 찾기 지원
+<!-- - Automatic competition starting and ending -->
+- 자동 경시 시작 및 종료
+<!-- - Team management, hiding, and banning -->
+- 팀 관리, 숨김, 벤 기능
+<!-- - Customize everything using the [plugin](https://docs.ctfd.io/docs/plugins/overview) and [theme](https://docs.ctfd.io/docs/themes/overview) interfaces -->
+- [플러그인](https://docs.ctfd.io/docs/plugins/overview) 과 [테마](https://docs.ctfd.io/docs/themes/overview) 인터페이스를 사용하여 커스터마이징할 수 있습니다.
+<!-- - Importing and Exporting of CTF data for archival -->
+- 데이터 보관 및 이전을 위한 CTF 데이터 불러오기 및 추출하기 기능
 - And a lot more...
 
 ## Install
